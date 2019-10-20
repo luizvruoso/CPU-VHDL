@@ -1,0 +1,12 @@
+
+State Machine - |CPU|CTRLUNIT:unidadeControle|current_state
+Name current_state.ARITH2 current_state.ARITH1 current_state.ARITH0 current_state.XCHG2 current_state.XCHG1 current_state.XCHG0 current_state.MOVi current_state.MOV current_state.DECODE 
+current_state.DECODE 0 0 0 0 0 0 0 0 0 
+current_state.MOV 0 0 0 0 0 0 0 1 1 
+current_state.MOVi 0 0 0 0 0 0 1 0 1 
+current_state.XCHG0 0 0 0 0 0 1 0 0 1 
+current_state.XCHG1 0 0 0 0 1 0 0 0 1 
+current_state.XCHG2 0 0 0 1 0 0 0 0 1 
+current_state.ARITH0 0 0 1 0 0 0 0 0 1 
+current_state.ARITH1 0 1 0 0 0 0 0 0 1 
+current_state.ARITH2 1 0 0 0 0 0 0 0 1 

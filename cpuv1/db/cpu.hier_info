@@ -8,7 +8,9 @@ Clock => registrador:reg4.Clock
 Clock => registrador:temp1.Clock
 Clock => registrador:temp2.Clock
 Instruction[15] => CTRLUNIT:unidadeControle.instruction[15]
+Instruction[15] => trin:triUPCODE.X[0]
 Instruction[14] => CTRLUNIT:unidadeControle.instruction[14]
+Instruction[14] => trin:triUPCODE.X[1]
 Instruction[13] => CTRLUNIT:unidadeControle.instruction[13]
 Instruction[12] => CTRLUNIT:unidadeControle.instruction[12]
 Instruction[11] => CTRLUNIT:unidadeControle.instruction[11]
@@ -23,11 +25,10 @@ Instruction[3] => CTRLUNIT:unidadeControle.instruction[3]
 Instruction[2] => CTRLUNIT:unidadeControle.instruction[2]
 Instruction[1] => CTRLUNIT:unidadeControle.instruction[1]
 Instruction[0] => CTRLUNIT:unidadeControle.instruction[0]
-Li <= CTRLUNIT:unidadeControle.Li
-ULA[3] <= CTRLUNIT:unidadeControle.ULA[3]
-ULA[2] <= CTRLUNIT:unidadeControle.ULA[2]
-ULA[1] <= CTRLUNIT:unidadeControle.ULA[1]
-ULA[0] <= CTRLUNIT:unidadeControle.ULA[0]
+Li << Li.DB_MAX_OUTPUT_PORT_TYPE
+ULA[2] << comb.DB_MAX_OUTPUT_PORT_TYPE
+ULA[1] << ULA[1].DB_MAX_OUTPUT_PORT_TYPE
+ULA[0] << ULA[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cpu|CTRLUNIT:unidadeControle
@@ -109,7 +110,6 @@ instruction[0] => reg3out.OUTPUTSELECT
 instruction[0] => Li.OUTPUTSELECT
 instruction[0] => Mux13.IN8
 instruction[0] => Mux14.IN16
-Clock => ULA[3]~reg0.CLK
 Clock => ULA[2]~reg0.CLK
 Clock => ULA[1]~reg0.CLK
 Clock => ULA[0]~reg0.CLK
@@ -142,7 +142,6 @@ aux1in <= aux1in~reg0.DB_MAX_OUTPUT_PORT_TYPE
 aux2in <= aux2in~reg0.DB_MAX_OUTPUT_PORT_TYPE
 aux2out <= aux2out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Li <= Li~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ULA[3] <= ULA[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ULA[2] <= ULA[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ULA[1] <= ULA[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ULA[0] <= ULA[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
