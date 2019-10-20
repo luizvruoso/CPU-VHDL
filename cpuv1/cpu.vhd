@@ -53,7 +53,7 @@ reg3: registrador PORT MAP(Barramento, reg3in , Clock, R3);
 reg4: registrador PORT MAP(Barramento, reg4in , Clock, R4);
 
 temp1: registrador PORT MAP(Barramento, aux1in , Clock, AUX1);
-temp2: registrador PORT MAP(Barramento, aux2in , Clock, AUX2)
+temp2: registrador PORT MAP(Barramento, aux2in , Clock, AUX2);
 
 
 

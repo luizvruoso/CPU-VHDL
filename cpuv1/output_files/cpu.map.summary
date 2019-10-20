@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Failed - Sat Oct 19 22:21:25 2019
+Analysis & Elaboration Status : Successful - Sat Oct 19 22:25:44 2019
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : cpu
-Top-level Entity Name : cpu
+Top-level Entity Name : CPU
 Family : Cyclone IV E
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge
