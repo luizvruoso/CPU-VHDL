@@ -13,7 +13,7 @@ ENTITY CTRLUNIT IS
             aux1in: out std_logic;
             aux2in, aux2out: out std_logic;
             Li: out std_logic;
-            ULA: out std_logic_vector(0 to 3));
+            ULA: out std_logic_vector(0 to 2));
             
 END CTRLUNIT;
 
@@ -91,15 +91,15 @@ BEGIN
                     end if;
 
                     CASE OPCODE is
-                        WHEN "0001" => ULA <= "0000";
-                        WHEN "0010" => ULA <= "0000";
-                        WHEN "0011" => ULA <= "0001";
-                        WHEN "0100" => ULA <= "0001";
-                        WHEN "0111" => ULA <= "0010";
-                        WHEN "1000" => ULA <= "0010";
-                        WHEN "1001" => ULA <= "0011";
-                        WHEN "1010" => ULA <= "0011";
-                        WHEN others => ULA <= "UUUU"; -- Teste
+                        WHEN "0001" => ULA <= "000";
+                        WHEN "0010" => ULA <= "000";
+                        WHEN "0011" => ULA <= "001";
+                        WHEN "0100" => ULA <= "001";
+                        WHEN "0111" => ULA <= "010";
+                        WHEN "1000" => ULA <= "010";
+                        WHEN "1001" => ULA <= "011";
+                        WHEN "1010" => ULA <= "011";
+                        WHEN others => ULA <= "UUU"; -- Teste
                     end CASE;
                     aux2in <= '1';
                     current_state <= ARITH2;

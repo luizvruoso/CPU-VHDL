@@ -11,7 +11,7 @@ ENTITY CPU IS
 		
       
       Li: out std_logic;
-      ULA: out STD_LOGIC_VECTOR(0 to 3)
+      ULA: out STD_LOGIC_VECTOR(0 to 2)
 		-- end
 	   -- for the registers
 		
@@ -42,9 +42,10 @@ ARCHITECTURE Behavior OF CPU IS
 BEGIN
 
 
+Imediato(0) <= Instruction(15);
+Imediato(1) <= Instruction(14);
 
-
-unidadeControle : CTRLUNIT PORT MAP (Instruction, Clock, reg0out, reg0in, reg1out, reg1in, reg2out, reg2in, reg3out, reg3in, reg4out, reg4in, aux1in,aux2in, aux2out, Li, ULA );
+unidadeControle : CTRLUNIT PORT MAP (Instruction, Clock, reg0out, reg0in, reg1out, reg1in, reg2out, reg2in, reg3out, reg3in, reg4out, reg4in, aux1in,aux2in, aux2out, upCodeout, op );
 
 reg0: registrador PORT MAP(Barramento, reg0in , Clock, R0);
 reg1: registrador PORT MAP(Barramento, reg1in , Clock, R1);
