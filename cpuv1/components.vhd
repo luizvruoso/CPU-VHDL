@@ -29,7 +29,7 @@ COMPONENT CTRLUNIT IS
             aux1in: out std_logic;
             aux2in, aux2out: out std_logic;
             Li: out std_logic;
-            ULA: out std_logic_vector(0 to 3));
+            ULA: out std_logic_vector(0 to 2));
             
 END COMPONENT;
 
